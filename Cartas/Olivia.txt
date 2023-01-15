@@ -1,0 +1,10 @@
+Create Card
+{
+    Name ~ #Olivia#;
+    Effects ~ KillFriend;
+    Type ~ #Matcom Student#;
+    Attack ~ 2500;
+    Cost ~ 5;
+    Energy ~ 3;
+    Legion ~ Celestial;
+}

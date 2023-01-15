@@ -1,0 +1,10 @@
+Create Card
+{
+    Name ~ #FMD#;
+    Effects ~ DeathCard;
+    Type ~ #Team 5#;
+    Attack ~ 5001;
+    Cost ~ 5;
+    Energy ~ 3;
+    Legion ~ Underworld;
+}

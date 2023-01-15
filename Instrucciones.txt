@@ -1,0 +1,69 @@
+!!!HOLA, Bienvenido a tu Instructor Personal durante tu partida en FMD!!!
+
+CARACTERISTICAS DEL JUEGO
+1 - Es un juego de dos jugadores con formato PvP o individual
+2 - El juego consiste en una batalla entre monstruos que usan sus habilidades y hechizos para poder dañar al enemigo y obtener una legión victoriosa
+
+INSTRUCCIONES PARA JUGAR
+1 - Al iniciar la partida el primer jugador escogera sus cartas de la legion de los Celestials, acto seguido el otro jugador escoge las de Underworld
+2 - Cada jugador solo puede escoger 30 cartas para su baraja
+3 - Solo puedes tener hasta 4 copias de la misma carta 
+4 - Una vez seleccionadas las cartas, cada jugador roba hasta 4 cartas en su mano para empezar la partida, (Leer: Desarrollo del Juego)
+
+LAS CARTAS
+0 - Las Cartas presentan varias caracteristicas: Nombre, Efecto, Legion, Tipo, Ataque, Mana, Costo
+1 - Estas se dividen en dos legiones, Celestials y Underworlds
+2 - A su vez las Legiones se dividen en dos cartas, Monstruos y Conjuros
+3 - Los Monstruos se dividen en 4 especies, Humanos, Semi-Humanos, Demonios y Dragones (Si, un clásico)
+4 - En cada especie, excepto en los Dragones, encontraras los monstruos Batallantes y los Magos
+5 - Monstruos: Tipos Batallantes son: Warriors, Beast-Warriors, Dark Demon y Tipos Magos: Wizard, Shaman, Evil
+6 - Conjuros: Spell(Si tu Legion es Celestial) y Course(Si tu Legion es Underworld)
+
+JUGADORES
+1 - Obtienen al inicio de la partida 5 Unidades de Mana
+2 - Obtienen al inicio de la partida 6 Unidades de Vida
+
+JUEGO
+1 - Consiste en un sistema de turnos, donde cada jugador llevará a cabo un grupo de acciones
+2 - Estas acciones son: Invocar un Monstruo, Activar un Conjuro, Activar Efectos de Monstruo, Atacar o Terminar el Turno
+3 - Cuando un turno inicia, el jugador roba una carta, e incrementa en 1 sus unidades de Mana, luego puede llevar a cabo cualquiera de las acciones anteriores
+4 - La acción invocar solo se puede realizar una vez por ronda (Aunque existen cartas sorpresas que pueden cambiar eso)
+5 - Para invocar un monstruo nuevo o activar un hechizo, debes fijarte en su caracteristica ¨Costo¨, y pagar las unidades de Mana correspondientes
+Ejemplo: Si posees X Unidades de Mana, y activas una carta de Costo Y, tus Unidades de Mana seran: X = X - Y, si no entendiste, vuelvelo a leer :)
+6 - Ahora dirás "Si solo tengo 5 unidades de mana y me incrementan 1 por ronda, no podré hacer casi nada¨, para eso existe el Sacrificio
+7 - Si sacrificas una carta que tiene Mana Z, tus Unidades de Mana serán X = X + Z, tambien existen cartas que aumentan tu Mana
+8 - Entonces, la batalla
+9 - Cada monstruo solo puede atacar una vez por Batalla
+10 - Si la batalla es entre dos monstruos, el monstruo con el menor ataque será destruido, mientras que el de mayor ataque se debilitará según el ataque del menor
+11 - Si no existen mosntruos en el campo de tu oponente podrás realizar un ataque directo, tu oponente perderá una unidad de vida
+12 - Gana el jugador que primero reduzca a 0 la vida del oponente
+
+SOBRE LA CREACION DE CARTAS
+1-El sistema de creacion de cartas de este juego es muy diferente a lo conocido, en lugar de hacerlo desde el menu como en otros juegos, nos expandimos mas alla y dejamos que sea el jugador quien PROGRAME su propia carta.
+2-Como se hace esto :
+2.1 - Cree un archivo .txt de cualquier nombre, el archivo debe cumplir la siguiente estructura
+
+Create Card
+{
+    Name ~ #nombre de la carta#;
+    Effects ~ #efecto de la carta#;
+    Type ~ #eipo al que pertenece la carta#;
+    Attack ~ valor de ataque;
+    Cost ~ valor de costo;
+    Mana ~ valor del mana;
+    Legion ~ legion a la que pertenece la carta;
+}
+
+!!!ATENCION!!!
+Debe respetar la sintaxis de las palabras clave en todo momento. No se olvide de las letras mayusculas en el nombre de las propiedades (Name,Effects...etc). Debe tener en cuenta los signos especiales que explicaremos a continuacion
+'~' Representa "Asignacion", significa que la propiedad que este a la izquierda del simbolo obtendra el valor de lo que este a la derecha del simbolo
+'# #' Representa "Texto", signifa que lo que aparezca entre dos simbolos es una cadena de texto
+NUNCA LE DEBERA FALTAR EL ; AL FINAL DE CADA LINEA
+
+2.2 - Una vez creado su archivo, entre al juego. Encontrara la opcion de "Crear Cartas"
+2.3 - Seleccione esta opcion y copie la ruta donde esta el .txt con su codigo de la carta, el nombre del archivo y su extension, en este caso .txt
+
+Ejemplo(C:\Miguel\Proyecto\Txts\nombredelarchivo.txt
+
+!!Presiona cualquier tecla para Volver!!
+

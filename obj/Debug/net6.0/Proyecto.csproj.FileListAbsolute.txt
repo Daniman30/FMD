@@ -1,0 +1,30 @@
+/home/daniman/Escritorio/PROYECTO TGC 6.0/Version 0.2/Version 0.21/Proyecto/bin/Debug/net6.0/Proyecto
+/home/daniman/Escritorio/PROYECTO TGC 6.0/Version 0.2/Version 0.21/Proyecto/bin/Debug/net6.0/Proyecto.deps.json
+/home/daniman/Escritorio/PROYECTO TGC 6.0/Version 0.2/Version 0.21/Proyecto/bin/Debug/net6.0/Proyecto.runtimeconfig.json
+/home/daniman/Escritorio/PROYECTO TGC 6.0/Version 0.2/Version 0.21/Proyecto/bin/Debug/net6.0/Proyecto.dll
+/home/daniman/Escritorio/PROYECTO TGC 6.0/Version 0.2/Version 0.21/Proyecto/bin/Debug/net6.0/ref/Proyecto.dll
+/home/daniman/Escritorio/PROYECTO TGC 6.0/Version 0.2/Version 0.21/Proyecto/bin/Debug/net6.0/Proyecto.pdb
+/home/daniman/Escritorio/PROYECTO TGC 6.0/Version 0.2/Version 0.21/Proyecto/obj/Debug/net6.0/Proyecto.csproj.AssemblyReference.cache
+/home/daniman/Escritorio/PROYECTO TGC 6.0/Version 0.2/Version 0.21/Proyecto/obj/Debug/net6.0/Proyecto.GeneratedMSBuildEditorConfig.editorconfig
+/home/daniman/Escritorio/PROYECTO TGC 6.0/Version 0.2/Version 0.21/Proyecto/obj/Debug/net6.0/Proyecto.AssemblyInfoInputs.cache
+/home/daniman/Escritorio/PROYECTO TGC 6.0/Version 0.2/Version 0.21/Proyecto/obj/Debug/net6.0/Proyecto.AssemblyInfo.cs
+/home/daniman/Escritorio/PROYECTO TGC 6.0/Version 0.2/Version 0.21/Proyecto/obj/Debug/net6.0/Proyecto.csproj.CoreCompileInputs.cache
+/home/daniman/Escritorio/PROYECTO TGC 6.0/Version 0.2/Version 0.21/Proyecto/obj/Debug/net6.0/Proyecto.dll
+/home/daniman/Escritorio/PROYECTO TGC 6.0/Version 0.2/Version 0.21/Proyecto/obj/Debug/net6.0/ref/Proyecto.dll
+/home/daniman/Escritorio/PROYECTO TGC 6.0/Version 0.2/Version 0.21/Proyecto/obj/Debug/net6.0/Proyecto.pdb
+/home/daniman/Escritorio/PROYECTO TGC 6.0/Version 0.2/Version 0.21/Proyecto/obj/Debug/net6.0/Proyecto.genruntimeconfig.cache
+C:\Users\Yolaine\Downloads\Telegram Desktop\Proyecto (2)\Proyecto\bin\Debug\net6.0\Proyecto.exe
+C:\Users\Yolaine\Downloads\Telegram Desktop\Proyecto (2)\Proyecto\bin\Debug\net6.0\Proyecto.deps.json
+C:\Users\Yolaine\Downloads\Telegram Desktop\Proyecto (2)\Proyecto\bin\Debug\net6.0\Proyecto.runtimeconfig.json
+C:\Users\Yolaine\Downloads\Telegram Desktop\Proyecto (2)\Proyecto\bin\Debug\net6.0\Proyecto.dll
+C:\Users\Yolaine\Downloads\Telegram Desktop\Proyecto (2)\Proyecto\bin\Debug\net6.0\Proyecto.pdb
+C:\Users\Yolaine\Downloads\Telegram Desktop\Proyecto (2)\Proyecto\obj\Debug\net6.0\Proyecto.csproj.AssemblyReference.cache
+C:\Users\Yolaine\Downloads\Telegram Desktop\Proyecto (2)\Proyecto\obj\Debug\net6.0\Proyecto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yolaine\Downloads\Telegram Desktop\Proyecto (2)\Proyecto\obj\Debug\net6.0\Proyecto.AssemblyInfoInputs.cache
+C:\Users\Yolaine\Downloads\Telegram Desktop\Proyecto (2)\Proyecto\obj\Debug\net6.0\Proyecto.AssemblyInfo.cs
+C:\Users\Yolaine\Downloads\Telegram Desktop\Proyecto (2)\Proyecto\obj\Debug\net6.0\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Yolaine\Downloads\Telegram Desktop\Proyecto (2)\Proyecto\obj\Debug\net6.0\Proyecto.dll
+C:\Users\Yolaine\Downloads\Telegram Desktop\Proyecto (2)\Proyecto\obj\Debug\net6.0\refint\Proyecto.dll
+C:\Users\Yolaine\Downloads\Telegram Desktop\Proyecto (2)\Proyecto\obj\Debug\net6.0\Proyecto.pdb
+C:\Users\Yolaine\Downloads\Telegram Desktop\Proyecto (2)\Proyecto\obj\Debug\net6.0\Proyecto.genruntimeconfig.cache
+C:\Users\Yolaine\Downloads\Telegram Desktop\Proyecto (2)\Proyecto\obj\Debug\net6.0\ref\Proyecto.dll

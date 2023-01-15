@@ -1,0 +1,9 @@
+FuckOpponent
+{
+    Description #Your opponent will be fuck#;
+    Action ( Oplayer )
+    [
+        Oplayer < Manna > ~ 0;
+        Oplayer < Hand > - 10;
+    ]
+}

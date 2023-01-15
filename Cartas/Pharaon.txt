@@ -1,0 +1,10 @@
+Create Card
+{
+    Name ~ #The Last Pharaon#;
+    Effects ~ ManaMana;
+    Type ~ #Egypcian#;
+    Attack ~ 3000;
+    Cost ~ 3;
+    Energy ~ 3;
+    Legion ~ Celestial;
+}

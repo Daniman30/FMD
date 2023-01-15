@@ -1,0 +1,8 @@
+DownMerse
+{
+    Description #Select an oponent card and half his attack#;
+    Action ( Ocard )
+    [
+        Ocard < Attack > / 2;
+    ]
+}

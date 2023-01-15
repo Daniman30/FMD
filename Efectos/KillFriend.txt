@@ -1,0 +1,8 @@
+KillFriend
+{
+    Description #Your win the game#;
+    Action ( Oplayer )
+    [
+        Oplayer < Life > ~ 0;
+    ]
+}

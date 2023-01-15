@@ -1,0 +1,10 @@
+Create Card
+{
+    Name ~ #Prince of Persya#;
+    Effects ~ DownMerse;
+    Type ~ #VideoGame#;
+    Attack ~ 3000;
+    Cost ~ 3;
+    Energy ~ 3;
+    Legion ~ Celestial;
+}

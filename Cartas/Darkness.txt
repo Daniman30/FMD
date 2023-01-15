@@ -1,0 +1,10 @@
+Create Card
+{
+    Name ~ #Dark Guardian#;
+    Effects ~ Millenium;
+    Type ~ #Deadman#;
+    Attack ~ 2650;
+    Cost ~ 2;
+    Energy ~ 4;
+    Legion ~ Underworld;
+}

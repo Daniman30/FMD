@@ -1,0 +1,12 @@
+DeathCard
+{
+    Description #You can select a card on your field, increase his attack, his energy and decrease his cost. Then select a     oponent card and half his attack#;
+    Action ( MyCard, Ocard, Oplayer )
+    [
+        MyCard < Attack > * 2;
+        MyCard < Energy > * 10;
+        MyCard < Cost > - 2;
+        Ocard < Attack > / 2;
+        Oplayer < Manna > - 5;
+    ]
+}

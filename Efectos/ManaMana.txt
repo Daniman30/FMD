@@ -1,0 +1,10 @@
+ManaMana
+{
+    Description #Your Mana and your Life will be increase in twenty unitys#;
+    Action ( Player )
+    [
+        Player < Manna > + 20;
+        Player < Life > + 20;
+        Player < Hand > + 3;
+    ]
+}

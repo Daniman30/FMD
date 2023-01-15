@@ -13,19 +13,21 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Miguel\\PROYCETO TCG\\PROYCETO TCG.csproj",
-      "projectName": "PROYCETO TCG",
-      "projectPath": "C:\\Miguel\\PROYCETO TCG\\PROYCETO TCG.csproj",
+      "projectUniqueName": "C:\\Miguel\\Proyecto\\Proyecto.csproj",
+      "projectName": "Proyecto",
+      "projectPath": "C:\\Miguel\\Proyecto\\Proyecto.csproj",
       "packagesPath": "C:\\Users\\leyva\\.nuget\\packages\\",
-      "outputPath": "C:\\Miguel\\PROYCETO TCG\\obj\\",
+      "outputPath": "C:\\Miguel\\Proyecto\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\leyva\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\leyva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

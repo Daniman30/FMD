@@ -1,0 +1,10 @@
+Create Card
+{
+    Name ~ #Black Watcher#;
+    Effects ~ FuckOpponent;
+    Type ~ #Deadman#;
+    Attack ~ 2500;
+    Cost ~ 2;
+    Energy ~ 4;
+    Legion ~ Underworld;
+}

@@ -1,0 +1,9 @@
+Millenium
+{
+    Description #Your opponent loses two life point and you can select a card on your field and triplicate his Attack#;
+    Action ( Oplayer, MyCard )
+    [
+        Oplayer < Life > - 2;
+        MyCard < Attack > * 3;
+    ]
+}
