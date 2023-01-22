@@ -1,0 +1,223 @@
+Fire, Magic and Darkness (FMD)
+
+Poryecto de Programación II. Facultad de Matemática y Computación - Universidad
+de La Habana. Curso 2022.
+
+El propósito de este proyecto es implementar una biblioteca de clases y una
+aplicación visual para la variante de familia de juegos conocidos como Trading
+Cards Games de su propia concepción.
+
+JUEGO
+
+FMD es un juego de dos jugadores por turnos con formato JcJ o JcE. El juego consiste 
+en una batalla entre monstruos que usan su poder y sus hechizos para poder dañar al 
+enemigo y obtener una legión victoriosa. Los jugadores se dividen en dos legiones,
+construyen su mazo de 30 cartas y utilizando efectos y ataques intentaran acabar
+con la vida del enemigo.
+
+EJECUTANDO...
+
+Al ejecutar el juego se dispone de un menu con 5 opciones (iniciar una nueva 
+partida, crear carta, configuración, instrucciones y salir del juego). Para
+navegar por el juego se utiliza el teclado e intuitivamente se selecciona la 
+tecla asignada a cada opción. 
+
+Para jugar desde la ruta donde tengas el juego es necesario ejecutar en consola 
+
+    dotnet run
+
+    Nueva partida
+En la opcion de nueva partida se puede elegir entre jugar contra otra persona 
+o contra un jugador virtual (cambia segun la dificultad seleccionada), posterior
+a eso se escoge la legión con la que desea jugar, el nombre del jugador y elige
+las cartas que conformarán su mazo. Ya estará listo para iniciar su partida.
+
+        Jugando
+Por cada turno el jugador puede invocar una carta de su mano, atacar con una carta
+del campo a otra o directamente al jugador rival, activar efecto de alguna carta
+invocada (las cartas de mágicas activan su efecto al ser invocadas), consultar los 
+datos de alguna carta colocada en el campo, sacrificar una carta en el campo para 
+recuperar manna, rendirse (abandonar partida) o pasar turno.
+
+Por su parte la inteligencia artificial (IA) realizará sus movimientos acordes
+a las reglas del juego y se dividirá en 3 dificultades que cambiarán sus estrategias
+y estilos de juego por completo.
+
+    Crear carta
+
+
+    Configuración
+Puedes seleccionar el color del fondo de la consola, el color de las letras de la
+consola y la dificultad de la IA.
+
+    Instrucciones
+Si le das a esta opción tendras un manual para poder entender todas las mecánicas
+del juego y como poder navegar por èl.
+
+
+
+
+
+
+ADENTRÁNDONOS EN EL CÓDIGO
+
+	IA
+Para la inteligencia artificial (IA) del programa pensamos en crear un abanico de 
+posibles situaciones y la respectiva acción que debía hacer la IA. Por tanto la IA
+recibe como datos la cantidad de cartas del jugador, la cantidad de manna que tiene, 
+los datos de las cartas que tiene el rival desplegadas en el campo tales como el 
+ataque, el mana, etc. 
+
+Con todo esto la IA analiza según estos parámetros cual es la mejor acción, por ejemplo
+si activa una carta que su efecto sea hacer una invocación especial desde la mano, 
+la IA escoge la carta que mas ataque tiene y asi poder tener invocarla sin pagar mana.
+
+Finalmente la IA se divide en tres grandes grupos de acciones: invocar, activar efecto y
+atacar las cuales lleva a cabo analizando los parámetros antes mencionados y con otros
+algoritmos secundarios decide cual es la mejor acción a realizar.
+
+Para la dificultad el equipo decidió dividirla en 3 niveles según la calidad de las cartas
+escogidas al inicio de la partida. Para ello, en la dificultad más fácil se escogieron
+cartas con efectos muy nobles como incrementar mana, decrementarel costo de la carta, 
+entre otros. Para la dificultad intermedia permitimos que escogiera aleatoriamente
+todas las cartas de su mazo y para la dificultad más difícil escogerá las cartas 
+más poderosas, es decir, las que tienen efecto de destruir monstruo, invocación 
+especial, aumentar ataque, etc.
+
+
+	GAME
+Para jugar decidimos recorrer todos los menús presionando teclas específicas para
+cada acción. 
+
+N (Nueva partida), C(Configuración), I(Instrucciones), A(cargar efectos creados por
+el usuario), W(cargar cartas creadas por el usuario) y ESC para cerrar la consola.
+
+La opción de N (nueva partida) despliega el menú de nueva partida, en el cual decides
+si jugar una partida JcJ (jugador contra jugador) o JcE (jugador contra entidad, también)
+conocido como jugador contra CPU o IA). Seleccionado el modo solo queda ecribir nuestro
+nombre, seleccionar nuestra legión (Celestials o Underworld), escoger las cartas del 
+mazo y ¡¡¡A JUGAR!!!
+
+La opción de C (configuración) despliega una serie de opciones para configurar la 
+experiencia de juego para el usuario tales como el color de las letras de la consola,
+el color del fondo de la consola y la dificultad de la IA.
+
+La opción de I (instrucciones) despliega las instrucciones para jugar
+
+La opción de A de cargar efectos simplemente añade a la lista de efectos elegible por los
+jugadores todos los efectos implementados mediante un txt siguiendo las reglas establecidas
+(explicado en el acápite de COMPILADOR)
+
+La opción W de cargar cartas simplemente añade a la lista de cartas elegible por los
+jugadores todas las cartas implementadas mediante un txt siguiendo las reglas establecidas
+(explicado en el acápite de COMPILADOR)
+
+	Nueva partida JcJ
+Luego de escoger todas las opciones pre partida, el juego se encarga de organizar aleatoriamente
+el mazo de cada jugador y repartir las respectivas primeras cartas. Vamos a analizar cada
+opción que se puede hacer por turno una a una.
+
+INVOCAR: Solo se puede hacer una invocación normal por turno. Se selecciona el número 
+de la posición de la carta en la mano y si cumple que tienes mana suficiente para 
+invocar, espacio en el campo (o una carta de invocación para las mágicas) y todavía 
+dispones de la posibilidad de invocar entonces ésta carta será desplegada en la posición 
+disponible. En caso de ser una mágica se invocará, automaticamente activará el efecto 
+y posteriormente se destruirá y volverá al fondo del mazo.
+
+Si se intenta invocar una carta que no cumpla los requisitos de invocación, si el número 
+de la posición en la mano escogida no existe, así como si no hay espacio en el campo
+no se hará nada.
+
+ATACAR: Solo se puede atacar una vez por turno por carta. Se seleccionará el número 
+de la posición en el campo de la carta que desee que ataque, posteriormente se 
+selecciona el número de la posición del campo enemigo de la carta a la que se desea
+atacar y se resolverá el ataque disminuyéndole el ataque de la carta rival al ataque
+de nuestra carta, por ejemplo, si atacamos con Brave Warrior (2000 de ataque) a 
+Mysterius Tramp (1000 de ataque) entonces Brave Warrior terminará con 1000 de ataque
+(2000 - 1000) y Mysterius Tramp con -1000 de ataque (1000 - 2000) pero toda carta
+con menor o igual cantidad de ataque a 0 será automáticamente destruida.
+
+Si se selecciona una carta en nuestro campo para atacar y no hay ninguna carta en el
+campo rival se tendrá la opción de atacar directo, esta acción disminuye en 1 punto
+la vida del rival sin importar el ataque que tenga la carta.
+
+Si no hay cartas en el campo propio, si la carta seleccionada ya atacó, si se ecoge
+una posición del campo propio en la que no hay carta, si se selecciona una carta del 
+campo rival en la que no hay carta o seleccionas atacar directo cuando todavía hay 
+cartas en el campo rival, no hará nada.
+
+EFECTO: Solo se puede activar efecto una vez por carta. Se selecciona el número de la
+posición de la carta de la cual se quiere activar el efecto y se llevan a cabo las 
+instrucciones según el efecto (como pueden ser creados nuevos efectos por el jugador
+estos pueden ser diversos, desde escoger una carta en el campo propio o en el rival,
+escoger una carta de la mano o realizar acciones automáticamente). Las cartas mágicas
+activan el efecto automáticamente al ser invocadas.
+
+Si no hay cartas en el campo propio, se selecciona una posición en la cual no hay carta
+o se selecciona una carta que ya activó su efecto anteriormente, no se hará nada. Si 
+se activa un efecto para el cual no existen las condiciones necesarias (por ejemplo, 
+destruir una carta del campo rival y no hay ninguna carta en el campo rival) se pierde
+el efecto.
+
+CONSULTA: Despliega un campo de referencia el cual dice que tecla presionar para acceder
+a los datos de la carta ubicada en esa posición. Estos datos indican el nombre de la
+carta, el ataque, la energía, el costo, el efecto, la descripción del efecto y el tipo
+de la carta. A su vez también se refleja la vida y el manna del rival.
+
+SACRIFICAR: Se selecciona el número de la posición de la carta la cual se quiera sacrificar
+y ésta se destruye y aumenta el manna del jugador en la cantidad de puntos de energía que
+tenía la carta seleccionada.
+
+RENDIRSE: Se le requiere una confirmación para esta opción, si se elige que no (N) se
+continúa la partida normalmente, si se elige que si (Y) se acaba la partida automáticamente
+y gana el adversario.
+
+FIN DEL TURNO: Se acaba el turno actual y le toca al oponente (jugador rival o IA).
+
+	Nueva partida JcE
+El funcionamiento por parte del jugador es exactamente igual a JcJ pero cuando es el turno de
+la IA se aplica lo explicado anteriormente en el apartado de IA y cada acción que vaya tomando
+la IA queda reflejada en la consola por medio de mensajes y de actualizaciones en tiempo real
+del campo de juego.
+
+	COMPILADOR
+El 'compilador' es una especie de lenguaje de programación que permite crear nuevas cartas y
+nuevos efectos para ser utilizados en esas nuevas cartas. Para el entendimiento de este se
+remite al lector al archivo de instrucciones en el cual está explicado el funcionamiento del
+mismo. Es importante saber que para cada nueva carta se tiene que crear un nuevo archivo txt
+que quede guardado en la carpeta de cartas del juego, a su vez tiene que cumplir con los 
+requisitos y con la semántica establecida para la creación de nuevas cartas. Para los nuevos 
+efectos es necesario crear un nuevo archivo txt por cada uno y que sea guardado en la carpeta
+de efectos cumpliendo éste con la semántica establecida.
+
+Para que las nuevas cartas y los nuevos efectos sean utilizables en el juego es necesario antes
+cargarlos, para ello en el menú principal se selecciona la opción de cargar efectos y luego
+la opción de cargar cartas para que estas puedan utilizar los nuevos efectos. Así estas nuevas
+cartas serán seleccionables en el menú de confección de mazo.
+
+	NOTAS ESPECIALES
+Para el funcionamiento del juego se crearon unas cartas predefinidas con las cuales viene el
+juego predeterminado, éstas son representativas de una muestra de la posible confección de
+nuevas cartas.
+
+	CREADORES
+María F Suárez
+José M Leyva 
+Daniel Polanco
+
+FMD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
